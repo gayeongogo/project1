@@ -57,7 +57,7 @@
 				</div>
 				<nav id="nav" class="gnbWrap">
 					<div class="gnbArea">
-						<ul id="gnb" class="menu active">
+						<ul id="gnb" class="menu">
 							<li class="dep1">
 								<a href="#" title="참여민원">참여민원</a>
 								<div class="dep2Box">
@@ -324,26 +324,21 @@
 						</ul>
 					</div>
 				</nav>
-				<div class="moreMenu">
-					<div class="search">
-						<img src="./img/btn_sch.png" alt="검색">
-						<div class="formBg">
-							<div class="container">
-								<form action="#" name="searchForm" id="searchForm" method="post">
-									<div id="searchBox">
-										<label for="keySearch">키워드 검색</label>
-										<div id="searchArea">
-											<input type="text" id="keySearch" placeholder="검색어를 입력하세요.">
-											<button class="btnSearch"></button>
-										</div>
-									</div>
-								</form>
+				<div class="btnIn sch">
+					<span class="btn search">
+						<a href="javascript:">검색 열기</a>
+					</span>
+				</div>
+				<div class="schWrap">
+					<div class="schArea">
+						<label for="schWordFi">키워드 검색
+							<div>
+								<input type="text" placeholder="검색어를 입력하세요." id="schWordFi" name="schWordFi">
+								<button class="btnSearch">검색</button>
 							</div>
-						</div>
+						</label>
 					</div>
-					<div class="btnAllMenu">
-						<img src="./img/btn_allmenu4.png" alt="전체메뉴"><span class="menuTit">전체메뉴</span>
-					</div>
+				</div>
 				<div class="allMenuWrap">
 					<div class="allMenuDim"></div>
 					<div class="allMenuBox">
@@ -578,7 +573,6 @@
 						</dl>
 						<span class="allMenuClose"><a href="#">전체보기 닫기</a></span>
 					</div>
-				</div>
 				</div>
 			</div>
 		</header>

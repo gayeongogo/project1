@@ -54,8 +54,10 @@ body{letter-spacing: -0.7px; font-family: "Nanumsquare","Dotum",Arial,Sans-serif
 .menu .dep1:nth-child(even){margin-left: 54px;}
 .menu a{display: inline-block;}
 .menu .dep1 > a{position: relative; z-index: 100; height: 52px; font-size: 18px; line-height: 20px; color: #333;}
+.menu .dep1 > a:hover{color: #346d94;}
+.menu .dep1 > a:hover::after{display: block; position: absolute; content: ""; width: 100%; height: 4px; background: #346d94; bottom: -1px;}
 
-.menu .dep2Box{position: absolute; top: 52px; left: 0; z-index: 99; width: 100%; padding-bottom: 45px; background: #fff; border-bottom: 1px solid #c0c0c0;}
+.menu .dep2Box{position: absolute; top: 52px; left: 0; z-index: 99; width: 100%; padding-bottom:45px; background: #fff; border-bottom: 1px solid #c0c0c0; display: none; }
 .gnbWrap .gnbArea .menu .dep2Box{border-top: 1px solid #eee;}
 .menu .dep2List{width: 1100px; margin: 0 auto;}
 .menu .dep2List > span{position: absolute; display: inline-block; padding: 45px 0 15px 0; font-size: 30px; line-height: 1; word-spacing: -0.5em;}
@@ -71,21 +73,17 @@ body{letter-spacing: -0.7px; font-family: "Nanumsquare","Dotum",Arial,Sans-serif
 .menu .dep2List .scroll > ul > li.dep2 > ul > li.dep3::before{position: absolute; content: '-'; top: 0; left: 0;}
 
 
+/* 검색 */
+.btnIn{position: absolute; top: 0; left: 50%; margin-left: -550px;}
+.btnIn .btn{position: absolute; z-index: 9;}
+.btnIn .btn.search{top: 65px; right: 110px;}
+.btnIn .btn a{display: block; width: 24px; height: 23px; text-indent: -9999px; overflow: hidden;}
+.btnIn .btn.search a{background: url(../img/btn_sch.png) no-repeat top left;}
 
 
-.moreMenu{float: left; width: 117px; margin: 45px 0 0 25px;}
-.moreMenu .search{float: left; margin-right: 20px;}
-.moreMenu .search .formBg{display: none; width: 100%; height: 141px; background: #fff; position: absolute; left: 0; top: 120px; border-top: 2px solid #346d94;}
-.moreMenu .search:hover .formBg{display: block;}
-#searchForm{position: relative;}
-#searchForm #searchBox{position: absolute; top: 45px; left: 287px;}
-#searchBox label{float: left; font-size: 18px; font-weight: bold; padding-right: 20px; padding-top: 12px;}
-#searchBox #searchArea{float: left; width: 430px; height: 50px; padding: 0 75px 0 28px; border-radius: 25px; border: 2px solid #5d92af; background: #f0f0f0; box-sizing: border-box;}  
-#searchBox #searchArea #keySearch{width: 100%; height: 46px; background: transparent; font-size: 16px; line-height: 46px; border: none; float: left;}
-#searchBox #searchArea .btnSearch{background: url(../img/btn_schs.png) no-repeat; width: 48px; height: 46px; position: absolute; top: 12px; right: 10px;}
+
 
 /* 전체메뉴 */
-.moreMenu .btnAllMenu>img{float: left;}
 
 .allMenuWrap{display: none; position: fixed; z-index: 100; top: 0; right: 0; left: 0; bottom: 0; width: 100%; opacity: 1;}
 .allMenuWrap .allMenuDim{position: absolute; z-index: 101; top: 0; right: 0; left: 0; bottom: 0; width: 100%; background: red; opacity: .2;}
@@ -235,11 +233,11 @@ body{letter-spacing: -0.7px; font-family: "Nanumsquare","Dotum",Arial,Sans-serif
 .etcCont .lsBox>ul>li{width: 275px; height: 76px; float: left; border: 1px solid #ddd; margin-right: -1px; box-sizing: border-box; margin-bottom: -1px;}
 .etcCont .lsBox>ul>li>a{display: inline-block; width: 100%; height: 74px; font-size: 17px; line-height: 74px; padding-left: 30px; box-sizing: border-box; color: #333;}
 .etcCont .lsBox>ul>li>a:hover{color: #fff; background: #436ca9 url(../img/bg_maintab.png) no-repeat right 30px bottom 30px}
-.etcCont .lsBox>ul>li>a>span{}
+
 .etcCont .tvBox{width: 276px; height: 149px; float: left; border: 1px solid #ddd; margin-left: -1px;}
 .etcCont .tvBox dl{width: 100%; height: 100%; padding: 0 20px; box-sizing: border-box; position: relative;}
 .etcCont .tvBox dl dt{padding: 22px 0 14px 0; font-size: 17px; color: #333; font-weight: bold; line-height: 1;}
-.etcCont .tvBox dl dd{}
+
 .etcCont .tvBox dl dd .more{display: inline-block; width: 17px; height: 17px; background: url(../img/btn_more2.png) center center no-repeat; position: absolute; top: 22px; right: 22px;}
 .etcCont .tvBox dl dd .tvImg .thumBox{width: 236px; height: 83px; position: relative;}
 .etcCont .tvBox dl dd .tvImg .thumBox::after{content: ""; width: 100%; height: 100%; background: rgba(0,0,0,.5) url(../img/ico_play_off.png) no-repeat center center; position: absolute; top: 0; left: 0;}
@@ -265,8 +263,8 @@ body{letter-spacing: -0.7px; font-family: "Nanumsquare","Dotum",Arial,Sans-serif
 
 /* 하단전체메뉴 */
 .siteList{width: 100%;}
-.siteList .open{width: 100%; height: 50px;}
-.siteList .open>a{display: inline-block; font-size: 15px; color: #666; border: 1px solid #ddd; border-bottom: 0; padding: 0 20px 0 28px; height: 49px; line-height: 49px; float: right; background: #f6f4f3; font-weight: bold;}
+.siteList .open{width: 100%; height: 50px; position: relative;}
+.siteList .open>a{display: inline-block; font-size: 15px; color: #666; border: 1px solid #ddd; border-bottom: 0; padding: 0 20px 0 28px; height: 49px; line-height: 49px; background: #f6f4f3; font-weight: bold; position: absolute; top: 0; right: 0;}
 .siteList .open>a::after{content: ""; display: inline-block; background: url(../img/bg_sitebtn.png) no-repeat top left; width: 11px;height: 8px;margin-left: 8px;vertical-align: middle;}
 .popBox{width: 100%; height: 1400px; background: #f6f4f3;}
 .popBox dl dt{display: none;}
@@ -280,7 +278,7 @@ body{letter-spacing: -0.7px; font-family: "Nanumsquare","Dotum",Arial,Sans-serif
 .popBox dl dd .site li div{ padding-left: 250px; padding-top: 16px;}
 .popBox dl dd .site > li > div > .listSeoul > li{float: left; width: 170px; margin-bottom: 30px;}
 .popBox dl dd .site > li > div > .listSeoul > li > a{font-size: 17px; font-weight: bold; color: #333;}
-.popBox dl dd .site > li > div > a.main{display: inline-block; width: 170px;font-size: 17px; font-weight: bold; color: #333; float: left; margin-bottom: 30px;}
+.popBox dl dd .site > li > div > a.main{display: inline-block; width: 170px;font-size: 17px; font-weight: bold; color: #333; margin-bottom: 30px;}
 .popBox dl dd .site > li > div > .s-list{display: inline-block; width: 675px;}
 .popBox dl dd .site > li > div > .s-list > li{display: inline-block; position: relative; padding: 0 30px; margin-bottom: 30px;}
 .popBox dl dd .site > li > div > .s-list > li > a{color: #666;}

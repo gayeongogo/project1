@@ -1,9 +1,24 @@
 //메뉴
-$(".dep1").on({"mouseover focusin":function(){
-    $(this).next(".bg").stop().slideDown(300)
-},"mouseout":function(){
-    $(this).next(".bg").stop().slideUp(500)
-}});
+$('.menu .dep1').hover(function(){
+    let sub=$(this).find('.dep2Box');
+    if(sub.is(":visible")){
+      sub.css('display','block')
+    }else{
+       sub.slideDown(500)
+    }
+},function(){
+    let sub=$(this).find('.dep2Box');
+    if(sub.is(":visible")){
+       sub.css('display','none')
+    }else{
+        
+       sub.slideUp(500)
+    }
+})
+  
+        
+ 
+
 
 //화면크기조정
 let base=100;
