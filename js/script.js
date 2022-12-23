@@ -1,5 +1,5 @@
 //메뉴
-$('.menu .dep1').hover(function(){
+$('#gnb .dep1').hover(function(){
     let sub=$(this).find('.dep2Box');
     let dep2=$('.dep2Box');
     if(dep2.is(":visible")){
