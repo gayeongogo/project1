@@ -89,13 +89,13 @@ body{letter-spacing: -0.7px; font-family: "Nanumsquare","Dotum",Arial,Sans-serif
 
 /* 전체메뉴 */
 .btnIn .btn.allmenu{top: 65px; right: 30px; width: 60px;}
-.btnIn .btn.allmenu a{background: url(../img/btn_allmenu4.png)no-repeat top left; text-indent: -9px; width: 80px; padding-left: 30px; box-sizing: border-box;}
+.btnIn .btn.allmenu a{background: url(../img/btn_allmenu4.png)no-repeat top left; text-indent: -9px; width: 80px; padding-left: 30px; box-sizing: border-box;cursor: pointer;}
 
 
-.allMenuWrap{display: none; position: fixed; z-index: 100; top: 0; right: 0; left: 0; bottom: 0; width: 100%; opacity: 0;}
-.allMenuWrap .allMenuDim{position: absolute; z-index: 101; top: 0; right: 0; left: 0; bottom: 0; width: 100%; background: rgba(0,0,0,.8); opacity: .2;}
+.allMenuWrap{display: none; position: fixed; z-index: 100; top: 0; right: 0; left: 0; bottom: 0;}
+.allMenuWrap .allMenuDim{position: absolute; z-index: 101; top: 0; right: 0; left: 0; bottom: 0; width: 100%; background: rgba(0,0,0,.2); opacity: 0;}
 
-.allMenuWrap .allMenuBox{position: absolute; z-index: 102; top: 0; right: 0; bottom: 0; width: 1100px; border-left: 1px solid #d0d0d0; background: #fff;}
+.allMenuWrap .allMenuBox{position: absolute; z-index: 102; top: 0; right: -100%; bottom: 0; width: 1100px; border-left: 1px solid #d0d0d0; background: #fff;}
 .allMenuWrap .allMenuBox dt{height: 86px; padding: 10px 0 0 50px; border-bottom: 2px solid #346d94; box-sizing: border-box;text-align: left;}
 .allMenuWrap .allMenuBox dt span{ display: inline-block; width: 68px; height: 63px; background: url(../img/bg_allmenutit.png); overflow: hidden; text-indent: -999px;}
 .allMenuWrap .allMenuBox dd{padding: 50px 45px 50px 50px; box-sizing: border-box;}
@@ -268,13 +268,11 @@ body{letter-spacing: -0.7px; font-family: "Nanumsquare","Dotum",Arial,Sans-serif
 .ctrl>.rlPlus{background: #fff url(../img/btn_relationMore.png)no-repeat center center;}
 
 /* 하단전체메뉴 */
-.main_cont5{width: 100%;
-    background: #f7f4f3 url(../img/bg_sitewrap.png) repeat-x 0 0;}
 .siteList{width: 100%;}
 .siteList .open{width: 100%; height: 50px; position: relative;}
 .siteList .open>a{display: inline-block; font-size: 15px; color: #666; border: 1px solid #ddd; border-bottom: 0; padding: 0 20px 0 28px; height: 49px; line-height: 49px; background: #f6f4f3; font-weight: bold; position: absolute; top: 0; right: 0;}
 .siteList .open>a::after{content: ""; display: inline-block; background: url(../img/bg_sitebtn.png) no-repeat top left; width: 11px;height: 8px;margin-left: 8px;vertical-align: middle;}
-.popBox{width: 100%; height: 1400px; background: #f6f4f3;}
+.popBox{width: 100%; height: 1400px; background: #f6f4f3; border-top: 1px solid #ddd; display: none;}
 .popBox dl dt{display: none;}
 .popBox dl dd .site{width: 100%; text-align: left; position: relative;}
 .popBox dl dd .site > li{padding: 40px 0 10px 0; border-top: 1px solid #ddd; position: relative;}

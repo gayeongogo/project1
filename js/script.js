@@ -1,7 +1,7 @@
 //메뉴
 $('#gnb .dep1').hover(function(){
     let sub=$(this).find('.dep2Box');
-    let dep2=$('.dep2Box');
+    let dep2=$('#gnb .dep2Box');
     if(dep2.is(":visible")){
         dep2.css('display','none');
         sub.css('display','block')
@@ -11,18 +11,16 @@ $('#gnb .dep1').hover(function(){
     }
 },function(){
     let sub=$(this).find('.dep2Box');
-    let dep2=$('.dep2Box');
+    let dep2=$('#gnb .dep2Box');
     if(!dep2.is(":visible")){
        dep2.css('display','none');
        sub.slideUp(500)
     } else{
         
-        sub.slideUp(500)
+        sub.slideDown(500)
     } 
 })
   
-        
- 
 
 
 //화면크기조정
@@ -43,6 +41,30 @@ $('.zoom a').on('click', function(){
     .css('transform','scale('+base/100+')')
     .css('zoom', base+'%')
     return false;
+})
+
+
+//검색창
+
+
+//전체메뉴보기
+let allMenuOp=$('.btnIn .btn.allmenu a')
+let allMenu=$('.allMenuWrap')
+let allMenuBg=$('.allMenuWrap .allMenuDim')
+let allMenuR=$('.allMenuWrap .allMenuBox')
+let allMenuCl=$('.allMenuBox .allMenuClose a')
+
+allMenuOp.click(function(){
+    allMenu.css('display','block')
+    allMenuBg.css({opacity:'0'}).animate({opacity:'1'},500)
+    allMenuR.animate({right:0},400)
+})
+
+allMenuCl.click(function(){
+    allMenuR.animate({right:'-100%'},400)
+    allMenuBg.css({opacity:'1'}).animate({opacity:'0'},500, function(){ //안에 function 넣는 이유는 나중에 실행되게 하기 위함
+        allMenu.css('display','none')
+    })
 })
 
 // 메인슬라이드배너
@@ -239,8 +261,7 @@ $('.rolling>ul, .rlPre, .rlNext').hover(function(){
 })
 
 
-//전국검찰청 바로가기
-/* let siteBtn= */
+
 
 
 
