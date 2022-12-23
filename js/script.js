@@ -1,19 +1,24 @@
 //메뉴
 $('.menu .dep1').hover(function(){
     let sub=$(this).find('.dep2Box');
-    if(sub.is(":visible")){
-      sub.css('display','block')
+    let dep2=$('.dep2Box');
+    if(dep2.is(":visible")){
+        dep2.css('display','none');
+        sub.css('display','block')
     }else{
+    
        sub.slideDown(500)
     }
 },function(){
     let sub=$(this).find('.dep2Box');
-    if(sub.is(":visible")){
-       sub.css('display','none')
-    }else{
-        
+    let dep2=$('.dep2Box');
+    if(!dep2.is(":visible")){
+       dep2.css('display','none');
        sub.slideUp(500)
-    }
+    } else{
+        
+        sub.slideUp(500)
+    } 
 })
   
         
