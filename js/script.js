@@ -9,15 +9,18 @@ $('#gnb .dep1').hover(function(){
     
        sub.slideDown(500)
     }
+    searchWrap.css('display','none')
+    searchBtn.removeClass('close')
+
 },function(){
     let sub=$(this).find('.dep2Box');
     let dep2=$('#gnb .dep2Box');
     if(!dep2.is(":visible")){
        dep2.css('display','none');
-       sub.slideUp(500)
+       sub.slideDown(500)
     } else{
         
-        sub.slideDown(500)
+        sub.slideUp(500)
     } 
 })
   
@@ -45,6 +48,24 @@ $('.zoom a').on('click', function(){
 
 
 //검색창
+let searchBtn=$('.btnIn .btn.search a');
+let searchWrap=$('.schWrap');
+let ocBtn=true
+
+searchBtn.click(function(){
+    if(ocBtn==true){
+        $(this).addClass('close');
+        ocBtn=false;
+        searchWrap.css({display: 'block', opacity: 0}).animate({opacity: '1'},500)
+    }else{
+        $(this).removeClass('close');
+        ocBtn=true;
+        searchWrap.css({opacity: 1}).animate({opacity: '0'},500), function(){
+            searchWrap.css('display','none')
+        }
+    }
+})
+
 
 
 //전체메뉴보기
@@ -261,6 +282,14 @@ $('.rolling>ul, .rlPre, .rlNext').hover(function(){
 })
 
 
+//전국검찰청 바로가기
+let siteListBtn=$('.open');
+let $popBox=$('.popBox');
+
+
+siteListBtn.click(function(){
+    $popBox.stop().slideToggle(600);
+})
 
 
 
