@@ -300,7 +300,14 @@ siteListBtn.click(function(){
 })
 
 
+/* sub1 */
+let $on=$('.dep2.sub.on');
 
-
-    
-
+$('.dep2.sub > a').click(function(){
+    $('li.dep3').parent('ul').hide();
+    if($(this).next('ul').is(':hidden')){
+        $(this).next('ul').slideDown(0);
+    }else{
+        $(this).next('ul').slideUp(0);
+    }
+})

@@ -156,7 +156,8 @@ a.new::after{content: ''; display: inline-block; width: 11px; height: 11px; marg
 .lnbWrap .lnb>li.sub>a:hover::before{background-position: 0 -12px;}
 .lnbWrap .lnb>li.sub.on>a::before,.lnbWrap .lnb>li.sub>a:focus::before{background-position: 0 -24px;}
 .lnbWrap .lnb>li.sub>a::before{background-position: 0 0;}
-.lnbWrap .lnb>li>ul{margin-top: -10px; padding-bottom: 13px;}
+.lnbWrap .lnb>li>ul{margin-top: -10px; padding-bottom: 13px; display: none;}
+.lnbWrap .lnb>li:first-child>ul{display: block;}
 .lnbWrap .lnb>li>ul>li{padding-top: 1px;}
 .lnbWrap .lnb>li>ul>li:first-child{padding-top: 0;}
 .lnbWrap .lnb>li>ul>li>a{display: block; padding: 4px 10px 3px 30px; color: #666;}
