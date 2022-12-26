@@ -102,7 +102,7 @@ a.new::after{content: ''; display: inline-block; width: 11px; height: 11px; marg
 .btnIn .btn.allmenu a{background: url(../img/btn_allmenu4.png)no-repeat top left; text-indent: -9px; width: 80px; padding-left: 30px; box-sizing: border-box;cursor: pointer;}
 
 
-.allMenuWrap{display: none; position: fixed; z-index: 100; top: 0; right: 0; left: 0; bottom: 0;}
+.allMenuWrap{display: none; position: fixed; z-index: 9999; top: 0; right: 0; left: 0; bottom: 0;}
 .allMenuWrap .allMenuDim{position: absolute; z-index: 101; top: 0; right: 0; left: 0; bottom: 0; width: 100%; background: rgba(0,0,0,.2); opacity: 0;}
 
 .allMenuWrap .allMenuBox{position: absolute; z-index: 102; top: 0; right: -100%; bottom: 0; width: 1100px; border-left: 1px solid #d0d0d0; background: #fff;}
