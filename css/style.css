@@ -17,6 +17,7 @@ body{letter-spacing: -0.7px; font-family: "Nanumsquare","Dotum",Arial,Sans-serif
 /* 헤더영역 */
 .header{background: #fff; text-align: center;}
 /* 메뉴영역 */
+a.new::after{content: ''; display: inline-block; width: 11px; height: 11px; margin-left: 15px; background: url(../img/blt_newwin.png) no-repeat center right; vertical-align: middle;}
 .logo{float: left; width: 89px; height: 83px; margin-top: 20px;}
 .top>ul{width: 500px; float: right; margin-top: 13px;}
 .top>ul>li{float: left;}
