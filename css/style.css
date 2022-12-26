@@ -18,8 +18,7 @@ body{letter-spacing: -0.7px; font-family: "Nanumsquare","Dotum",Arial,Sans-serif
 .header{background: #fff; text-align: center;}
 /* 메뉴영역 */
 .logo{float: left; width: 89px; height: 83px; margin-top: 20px;}
-.top{position: relative; top: 10px;}
-.top>ul{float: right;}
+.top>ul{width: 500px; float: right; margin-top: 13px;}
 .top>ul>li{float: left;}
 .top>ul>li::before{display: inline-block; content: ""; width: 1px; height: 12px; background: #ddd; margin: 0 18px; vertical-align: middle;}
 .top>ul>li:first-child::before{width: 0; height: 0;}
@@ -39,10 +38,19 @@ body{letter-spacing: -0.7px; font-family: "Nanumsquare","Dotum",Arial,Sans-serif
 }
 .top>ul>li.zoom>a.zoom-out{background: url(../img/btn_fontsize.png) no-repeat left bottom;}
 
+/* 언어선택 */
 
-.top>ul>li>#lgSelect{outline: none; border: none; text-transform: uppercase;}
-.top>ul>li>#lgSelect option{text-transform: uppercase;}
-.top>ul>li>a, .top>ul>li>span{display: inline-block; font-size: 12px; color: #666; font-weight: bold;}
+.language{display: inline-block; position: relative; }
+.language a{display: inline-block; width: 90px; text-align: left;}
+.language>span>a{background: url(../img/bg_lang.png) no-repeat 64px 3px; font-size: 12px; color: #333; font-weight: bold;}
+.languageBox{display: none; width: 95px; height: auto; background: #fff; position: absolute; z-index: 1000; top: -10px; left: -10px; padding: 9px; box-sizing: border-box; border: 1px solid #346d94;}
+.languageBox span{display: block; width: 90px; margin-bottom: 5px; color: #666;}
+.languageBox span:last-child{ margin-bottom: 0;}
+.languageBox a{color: #666;}
+.languageBox a.now{background: url(../img/bg_langon.png) no-repeat 64px 3px; color: #346d94;}
+.languageBox span:not(:first-child):hover a{ text-decoration: underline;}
+
+.top>ul>li>a, .top>ul>li span{display: inline-block; font-size: 12px; color: #666; font-weight: bold;}
 
 /* 메뉴 */
 .gnbWrap{position: absolute; top: 68px; left: 0; right: 0; width: 100%;}
@@ -78,10 +86,10 @@ body{letter-spacing: -0.7px; font-family: "Nanumsquare","Dotum",Arial,Sans-serif
 .btnIn .btn{position: absolute; z-index: 9;}
 .btnIn .btn.search{top: 65px; right: 110px;}
 .btnIn .btn a{display: block; width: 24px; height: 23px; text-indent: -9999px; overflow: hidden;}
-.btnIn .btn.search a{background: url(../img/btn_sch.png) no-repeat top left;}
+.btnIn .btn.search a{background: url(../img/btn_sch.png) no-repeat top left; transition: .5s;}
 .btnIn .btn.search a.close{background: url(../img/btn_schon.png) no-repeat top left;}
 
-.schWrap{width: 100%; height: 143px; background: #fff; position: absolute; top: 120px; left: 0; z-index: 999; border-top: 2px solid #346d94; border-bottom: 1px solid #c0c0c0; display: none; opacity: 0;}
+.schWrap{width: 100%; height: 143px; background: #fff; position: absolute; top: 120px; left: 0; z-index: 999; border-top: 2px solid #346d94; border-bottom: 1px solid #c0c0c0; display: none; }
 .schWrap .schArea{position: relative; padding-top: 45px;}
 .schWrap .schArea>label{display: inline-block; padding-right: 20px; font-size: 18px; line-height: 50px;font-weight: bold; vertical-align: middle;}
 .schWrap .schArea>div{display: inline-block; width: 430px; height: 50px; position: relative; border: 2px solid #5d92af; border-radius: 25px; background: #f0f0f0; padding: 0 75px 0 28px; box-sizing: border-box;}

@@ -9,6 +9,7 @@ $('#gnb .dep1').hover(function(){
     
        sub.slideDown(500)
     }
+    ocBtn=true;
     searchWrap.css('display','none')
     searchBtn.removeClass('close')
 
@@ -17,7 +18,7 @@ $('#gnb .dep1').hover(function(){
     let dep2=$('#gnb .dep2Box');
     if(!dep2.is(":visible")){
        dep2.css('display','none');
-       sub.slideDown(500)
+       sub.slideUp(500)
     } else{
         
         sub.slideUp(500)
@@ -46,6 +47,15 @@ $('.zoom a').on('click', function(){
     return false;
 })
 
+//언어선택
+$('.language a').click(function(){
+    $('.languageBox').css('display','block')
+});
+$('.languageBox a.now').click(function(){
+    $('.languageBox').css('display','none')
+});
+
+
 
 //검색창
 let searchBtn=$('.btnIn .btn.search a');
@@ -56,13 +66,11 @@ searchBtn.click(function(){
     if(ocBtn==true){
         $(this).addClass('close');
         ocBtn=false;
-        searchWrap.css({display: 'block', opacity: 0}).animate({opacity: '1'},500)
+        searchWrap.fadeIn(500)
     }else{
         $(this).removeClass('close');
         ocBtn=true;
-        searchWrap.css({opacity: 1}).animate({opacity: '0'},500), function(){
-            searchWrap.css('display','none')
-        }
+        searchWrap.fadeOut(500)
     }
 })
 
