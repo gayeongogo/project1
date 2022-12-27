@@ -301,10 +301,10 @@ siteListBtn.click(function(){
 
 
 /* sub1 */
-let $on=$('.dep2.sub.on');
+$('#lnb>li').not('.on').find('>ul').hide();
 
 $('.dep2.sub > a').click(function(){
-    $('li.dep3').parent('ul').hide();
+    $('#lnb>li').not('.on').find('>ul').hide();
     if($(this).next('ul').is(':hidden')){
         $(this).next('ul').slideDown(0);
     }else{
