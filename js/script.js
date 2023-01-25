@@ -311,3 +311,40 @@ $('.dep2.sub > a').click(function(){
         $(this).next('ul').slideUp(0);
     }
 })
+
+//sub2 검찰활동 탭
+
+$('.contWrap').each(function(){
+    let tapDiv=$(this);
+    let anchors=tapDiv.find('.tapArea .tap > li > a');
+    let panelDivs=tapDiv.find('.panel')
+    let lastAnchor;
+    let lastPanel;
+    let lastList;
+
+    lastAnchor=anchors.filter('.on');
+    lastList=lastAnchor.parent('li');
+    lastPanel=$(lastAnchor.attr('href'));
+
+    panelDivs.hide();
+    lastPanel.show();
+
+    anchors.click(function(e){
+        e.preventDefault();
+        let currentAnchor=$(this);
+        let currentList=currentAnchor.parent('li');
+        let currentPanel=$(currentAnchor.attr('href'));
+        lastAnchor.removeClass('on')
+        currentAnchor.addClass('on')
+
+        lastList.removeClass('on')
+        currentList.addClass('on')
+
+        lastPanel.hide();  //위에서 보이고 있던 것 숨기고
+        currentPanel.show(); //현재 선택되는 것을 보여줌
+
+        lastAnchor=currentAnchor; //이전에 선택했던것을 last로 바꾸고, 현재 선택한 것을 current로 바꿈
+        lastPanel=currentPanel;
+        lastList=currentList;
+    })
+});
