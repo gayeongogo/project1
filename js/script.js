@@ -348,3 +348,15 @@ $('.contWrap').each(function(){
         lastList=currentList;
     })
 });
+
+//sub6 본인인증 화살표
+$('.slideBtn').click(function(){
+    if($(this).hasClass('on')){
+        $('.slideBtn').removeClass('on');
+        $('.form-box').stop().slideUp(200);
+    }else{
+        $('.slideBtn').removeClass('on');
+        $(this).addClass('on');
+        $('.form-box').stop().slideDown(200);
+    }
+});

@@ -203,7 +203,6 @@ a.new::after{content: ''; display: inline-block; width: 11px; height: 11px; marg
 /* 선택탭 */
 .content{float: left; width: 830px; margin-left: 50px;}
 .pageTitle>h3{margin: 50px 0 26px 0; font-size: 24px; font-weight: bold; line-height: 1; color: #111111;}
-.contWrap{min-height: 535px;}
 .tapArea{margin-bottom: 40px;}
 .tapArea .tap{height: 50px; overflow: hidden; background: url(../img/bg_tab.png) repeat-x left top;}
 .tapArea .tap>li{overflow: hidden; float: left ;display: table; table-layout: fixed; width: 208px; height: 48px; margin-left: -1px; border: 1px solid #ddd; border-bottom: 0; background: #eee; vertical-align: top;text-align: center;}
